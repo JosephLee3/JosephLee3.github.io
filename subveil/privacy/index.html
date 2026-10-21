@@ -36,7 +36,7 @@
     <a href="#ja" data-lang="ja">日本語</a>
   </nav>
 
-  <section id="en" lang="en">
+  <section id="lang-en" lang="en">
     <h1>SubVeil Privacy Policy</h1>
     <p class="date">Effective date: October 21, 2026</p>
     <p>SubVeil (“the app”) puts a movable bar over burned-in subtitles in other apps. This policy explains what the app does with information on your phone.</p>
@@ -72,7 +72,7 @@
     <p>Questions about this policy: <a href="mailto:markcat@live.com">markcat@live.com</a></p>
   </section>
 
-  <section id="zh-Hans" lang="zh-Hans">
+  <section id="lang-zh-Hans" lang="zh-Hans">
     <h1>字幕遮挡（SubVeil）隐私政策</h1>
     <p class="date">生效日期：2026 年 10 月 21 日</p>
     <p>字幕遮挡（SubVeil，以下简称“本应用”）会在其他应用上方放一条可移动的遮挡条，用来盖住画面里的硬字幕。本政策说明本应用如何处理你手机上的信息。</p>
@@ -108,7 +108,7 @@
     <p>关于本政策的问题，请联系：<a href="mailto:markcat@live.com">markcat@live.com</a></p>
   </section>
 
-  <section id="zh-Hant" lang="zh-Hant">
+  <section id="lang-zh-Hant" lang="zh-Hant">
     <h1>字幕遮擋（SubVeil）隱私權政策</h1>
     <p class="date">生效日期：2026 年 10 月 21 日</p>
     <p>字幕遮擋（SubVeil，以下簡稱「本應用程式」）會在其他應用程式上方放一條可移動的遮擋條，用來蓋住畫面裡的硬字幕。本政策說明本應用程式如何處理你手機上的資訊。</p>
@@ -144,7 +144,7 @@
     <p>關於本政策的問題，請聯絡：<a href="mailto:markcat@live.com">markcat@live.com</a></p>
   </section>
 
-  <section id="ja" lang="ja">
+  <section id="lang-ja" lang="ja">
     <h1>字幕かくし（SubVeil）プライバシーポリシー</h1>
     <p class="date">施行日：2026 年 10 月 21 日</p>
     <p>字幕かくし（SubVeil、以下「本アプリ」）は、ほかのアプリの上に動かせるバーを重ねて、映像に焼き込まれた字幕を隠すアプリです。本ポリシーでは、本アプリが端末上の情報をどう扱うかを説明します。</p>
@@ -182,7 +182,8 @@
 </main>
 <script>
   // Show one language at a time: the one in the address (#zh-Hans), else the browser's. Without
-  // JavaScript every language stays visible.
+  // JavaScript every language stays visible. Section ids are "lang-…" so the address doesn't make
+  // the browser jump past the language links.
   (function () {
     var langs = ['en', 'zh-Hans', 'zh-Hant', 'ja'];
     function pick() {
@@ -199,7 +200,7 @@
     function show() {
       var lang = pick();
       langs.forEach(function (l) {
-        document.getElementById(l).classList.toggle('hidden', l !== lang);
+        document.getElementById('lang-' + l).classList.toggle('hidden', l !== lang);
         document.querySelector('nav a[data-lang="' + l + '"]').setAttribute('aria-current', String(l === lang));
       });
       document.documentElement.lang = lang;
