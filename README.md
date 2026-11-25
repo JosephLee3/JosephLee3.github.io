@@ -6,3 +6,4 @@ Public pages for JosephLee3's apps.
 - Clock privacy policy: https://josephlee3.github.io/clock/privacy/
 - 聖句100句 (BibleVerse) privacy policy: https://josephlee3.github.io/bibleverse/privacy/
 - 十字架 (Cross) privacy policy: https://josephlee3.github.io/cross/privacy/
+- World Holidays (两国节假日) privacy policy: https://josephlee3.github.io/holiday-app/privacy/
